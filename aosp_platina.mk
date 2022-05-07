@@ -19,16 +19,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common PixelExperience stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ProjectArcana stuff
+$(call inherit-product, vendor/aosp/config/common.mk)
 
-# PixelExperience Properties
+# ProjectArcana  Properties
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_USES_AOSP_RECOVERY := true
+TARGET_USES_AOSP_RECOVERY  := true
+WITH_GAPPS := true
+ARCANA_OFFICIAL := true
+ARCANA_DEVICE := platina
+ARCANA_MAINTAINER := gustadev
+TARGET_SUPPORTS_BLUR := false
+PREBUILT_LAWNCHAIR := true
+TARGET_BUILD_GRAPHENEOS_CAMERA := false
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
